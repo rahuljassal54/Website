@@ -12,4 +12,4 @@ jobs:
     - name: get remotes
       run: git remote -v
     - name: set remote
-      run: git remote set-url origin ${{ development.DREAMHOST_PATH}}
+      run: git remote set-url origin ${{ secrets.DREAMHOST_PATH}}
