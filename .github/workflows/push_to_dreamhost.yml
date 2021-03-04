@@ -1,0 +1,11 @@
+name: Syncing repos
+
+on: push
+
+jobs:
+  first:
+    name: Push to dreamhost
+    runs-on: ubuntu-latest
+    steps:
+    - name: loggin in
+      run: echo Demo job
