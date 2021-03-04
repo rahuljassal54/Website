@@ -7,5 +7,9 @@ jobs:
     name: Push to dreamhost
     runs-on: ubuntu-latest
     steps:
-    - name: loggin in
-      run: echo Demo job
+    - name: git status
+      run: git status
+    - name: get remotes
+      run: git remote -v
+    - name: set remote
+      run: git remote set-url origin ${{ development.DREAMHOST_PATH}}
