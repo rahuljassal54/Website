@@ -8,10 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: pwd
-      run: echo $(pwd)
+      run: echo $(pwd) && ls
     - name: git status
       run: git init && git add . && git status
+    - name: set remote
+      run: git remote add origin ${{ secrets.DREAMHOST_PATH}}
     - name: get remotes
       run: git remote -v
-    - name: set remote
-      run: git remote set-url origin ${{ secrets.DREAMHOST_PATH}}
